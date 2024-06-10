@@ -9,20 +9,11 @@
 
 <body>
     <h1>
-        Mi primera calculadora
+        Welcome to DSI
     </h1>
 
-    <h2>{{nombre}}</h2>
-
-    <form method="post">
-
-       <input type="number" name="valor1" id="valor1" value="{{ valor1 }}">
-       <input type="number" name="valor2" id="valor2" value="{{ valor2 }}">
-       <input type="number" name="resultado" id="resultado" value="{{ resultado}}">
-       <input type="submit" value="Calcular">
-
-
-    </form>
+    <a href="{{ url_for('calcular') }}">Ir a la calculadora</a> <br>
+    <a href="{{ url_for('generar_parqueo') }}">Ir al parqueo</a>
 
 
 </body>

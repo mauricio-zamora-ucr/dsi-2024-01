@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi parqueo</title>
+</head>
+<body>
+    <form method="post">
+        <label for="filas">Número de filas</label>
+        <input type="number" name="filas" id="filas"><br>
+        <label for="columnas">Número de columnas</label>
+        <input type="number" name="columnas" id="columnas"><br>
+        <input type="submit" value="Procesar">
+    </form>
+
+    {% if datos %}
+    <table border="1">
+        {% for dato in datos %}
+            <tr>
+            {% for columna in dato%}
+            <td>{{columna}}</td>
+            {% endfor%}
+        </tr>
+        {% endfor %}
+    </table>
+    {%else%}
+    NO SE HAY MOSTRADO NINGUN <br>
+    {% endif %}
+
+    <a href="{{url_for('main')}}">Regresar al página principal</a>
+</body>
+</html>
